@@ -67,13 +67,13 @@
         import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-firestore.js";
 
         const firebaseConfig = {
-            apiKey: "AIzaSyB3ZgAsCO6zeNxOp2ivM2vttm80lYz-dIs",
-            authDomain: "stockoverlay-1b03f.firebaseapp.com",
-            projectId: "stockoverlay-1b03f",
-            storageBucket: "stockoverlay-1b03f.firebasestorage.app",
-            messagingSenderId: "429861010518",
-            appId: "1:429861010518:web:951eeb87aaafb565668ff7",
-            measurementId: "G-PDB3WTBNZF"
+            apiKey: import.meta.env.VITE_API_KEY,
+            authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+            projectId: import.meta.env.VITE_PROJECT_ID,
+            storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+            messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+            appId: import.meta.env.VITE_APP_ID,
+            measurementId: import.meta.env.VITE_MEASUREMENT_ID
         };
 
         const app = initializeApp(firebaseConfig);
