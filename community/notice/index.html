@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osyna - StockOverlay</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="plus_style.css">
+</head>
+<body>
+    <div class="content-wrapper">
+    <header>
+        <div class="logo"><a href="/">StockOverlay</a></div>
+        <nav>
+        <a href="../support">Support</a>
+        <a href="../community">Community</a>
+        <button id="download" class="download-btn-nav">Download</button>
+        </nav>
+    </header>
+
+    <div class="intro">
+        <h1>📢 공지사항</h1>
+
+        <table id="noticeTable">
+            <thead>
+                <tr>
+                    <th>제목</th>
+                    <th>작성일</th>
+                </tr>
+            </thead>
+            <tbody id="noticeList"></tbody>
+        </table>
+
+        <!-- 글쓰기 버튼 및 글쓰기 창 -->
+        <button class="write-button" onclick="document.getElementById('noticeFormContainer').style.display='block'">글쓰기✏️</button>
+        <div id="noticeFormContainer" style="display: none;">
+            <form id="noticeForm" onsubmit="saveNotice(event)">
+                <input type="text" id="title" placeholder="제목" required="required">
+                <textarea id="content" placeholder="내용" required="required"></textarea><br>
+                <input type="submit" value="저장" class="write-button" id="saveButton">
+                <button type="button" class="write-button" onclick="document.getElementById('noticeFormContainer').style.display='none'">취소</button>
+            </form>
+        </div>
+    </div>
+        
+    <footer>
+        © 2025 Osyna. All rights reserved.
+    </footer>
+    
+    <script src="main.js"></script>
+    <script type="module" src="module.js"></script>
+</body>
+</html>
