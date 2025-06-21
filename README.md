@@ -1,1 +1,1 @@
-All rights reserved
+© 2025 Osyna. All rights reserved.
